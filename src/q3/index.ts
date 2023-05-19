@@ -1,4 +1,6 @@
-export function findLongestSubarray(arr: number[], target: number): [number, number] | null {
-  // Implementation goes here
-  return null;
+export function groupAnagrams(words: string[]): string[][] {
+  console.log(words);
+  // Implementation here
+  return [];
 }
+

@@ -1,4 +1,5 @@
-export function reverseWords(input: string): string {
+export function findMaxConsecutiveOnes(nums: number[]): number {
+  console.log(nums);
   // Implementation goes here
-  return '';
+  return 0;
 }

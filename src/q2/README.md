@@ -1,50 +1,52 @@
-### Challenge Title: Book Library
+## Challenge: Smallest Missing Positive Integer
 
-#### Difficulty: Beginner Level
+### Difficulty: Medium
 
-#### Description:
+You are given an unsorted integer array. Your task is to implement a function that finds and returns
+the smallest missing positive integer in the array.
 
-You are tasked with building a Book Library system that allows users to add, remove, and search for books. The system
-should be implemented as a class called BookLibrary, which should have the following functionalities:
+Your function should return the smallest positive integer that does not exist in the array. If all
+positive integers from 1 to the maximum value in the array are present, the function should return
+the maximum value plus one.
 
-* `addBook(book: Book): void`: This method should allow users to add a `book` to the library. The `book` parameter should be
-  an object of type `Book`, which has the following properties: `title (string)`, `author (string)`, `genre (string)`, and
-  `year (number)`. The method should add the book to the library and store it for future reference.
+### Function Signature:
 
-* `removeBook(bookTitle: string): boolean`: This method should allow users to remove a book from the library based on
-  its title. The method should return `true` if the book was successfully removed, and `false` otherwise.
-
-* `searchBooks(searchTerm: string): Book[]`: This method should allow users to search for books in the library based on
-  a search term. The method should return an array of `Book` objects that match the search term. The search should be
-  case-insensitive and should match against the `title`, `author`, and `genre` properties of the books.
-
-* `getAllBooks(): Book[]`: This method should return an array of all the books in the library.
-
-
-Example:
 ```typescript
-// Usage example
-const library = new BookLibrary();
-const book1 = new Book("The Catcher in the Rye", "J.D. Salinger", "Fiction", 1951);
-const book2 = new Book("To Kill a Mockingbird", "Harper Lee", "Fiction", 1960);
-const book3 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", 1925);
-
-library.addBook(book1);
-library.addBook(book2);
-library.addBook(book3);
-
-console.log(library.getAllBooks()); // Output: [book1, book2, book3]
-
-console.log(library.searchBooks("catcher")); // Output: [book1]
-console.log(library.searchBooks("Fiction")); // Output: [book1, book2, book3]
-
-console.log(library.removeBook("To Kill a Mockingbird")); // Output: true
-
-console.log(library.getAllBooks()); // Output: [book1, book3]
+function findSmallestMissingPositive(nums: number[]): number {
+  // Implementation goes here
+  return 0;
+}
 ```
 
-#### NOTES: 
+### Input:
 
-Ensure that the implementation;
-* should not allow adding a duplicate book to the library;
-* should handle removing a book with case-insensitive title match
+The `arr` parameter is an unsorted integer array. The length of the array is between 1 and
+10^5 `(1 <= arr.length <= 10^5)`. The array can contain positive and negative integers.
+
+### Output:
+
+The function should return the smallest missing positive integer in the array.
+
+### Examples:
+
+```typescript
+findSmallestMissingPositive([1,2,0]); // Output: 3 (The smallest missing positive integer is 3)
+findSmallestMissingPositive([3, 4, -1, 1]); // Output: 2 (The smallest missing positive integer is 2)
+findSmallestMissingPositive([7, 8, 9, 11, 12]); // Output: 1 (The smallest missing positive integer is 1)
+findSmallestMissingPositive([-1, -2, -3]); // Output: 1 (The smallest missing positive integer is 1)
+findSmallestMissingPositive([1, 2, 3,4]); // Output: 5 (All positive integers from 1 to the maximum value 4 are present, so the smallest missing positive integer is 5)
+```
+
+In the first example, the smallest missing positive integer is `3` because the array does not
+contain it.
+
+In the second example, the smallest missing positive integer is `2`.
+
+In the third example, the smallest missing positive integer is `1` because none of the positive
+integers from `1` to the maximum value in the array are present.
+
+In the fourth example, the smallest missing positive integer is `1` because all the integers in the
+array are negative.
+
+In the fifth example, the smallest missing positive integer is `5` because all positive integers
+from 1 to the maximum value 4 are present.

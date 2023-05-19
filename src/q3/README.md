@@ -1,57 +1,46 @@
-### Challenge: Find Longest Sub-Array
+## Problem Statement
 
-#### Difficulty: Mid-Level
+You are given a list of strings containing English words. Your task is to implement a function `groupAnagrams` that
+groups anagrams together and **returns them as a nested array and the groups therein are sorted alphabetically**.
 
+An anagram is a word or phrase formed by rearranging the letters of a different word or phrase. For example, "listen"
+and "silent" are anagrams of each other.
 
-You are given an array of integers, and you need to implement a function that finds and returns the longest subarray
-with a sum less than or equal to a given target value.
-
-Your function should return the starting and ending indices of the subarray. If multiple sub-arrays have the same
-maximum length, return the one with the smallest starting index.
-
-### Function Signature:
+Function signature:
 
 ```typescript
-function findLongestSubarray(arr: number[], target: number): [number, number] | null {
+function groupAnagrams(words: string[]): string[][] {
   // Implementation goes here
 }
 ```
 
-#### Input:
-
-* An array of integers `arr` *(1 <= arr.length <= 10^5)* representing the input array of integers.
-* An integer `target` *(-10^9 <= target <= 10^9)* representing the target value for the sum of subarray.
-
-#### Output:
-Return a tuple `[start, end]` representing the starting and ending indices of the longest subarray with a sum less than or
-equal to the target value. If no such subarray exists, return `null`.
-
-
-### Example: 
+### Example
 
 ```typescript
-const arr = [1, 4, 3, 6, 8, 2];
-const target = 12;
-const result = findLongestSubarray(arr, target);
-
-console.log(result); // Output: [0, 2] (The subarray [1, 4, 3] has a sum of 8, which is less than the target value of 12, and it is the longest subarray with a sum less than or equal to the target value.)
-
+const words = ["eat", "tea", "tan", "ate", "nat", "bat"];
+console.log(groupAnagrams(words));
 ```
+
+Expected output:
 
 ```typescript
-const arr = [1, 4, 3, 6, 8, 2];
-const target = 5;
-const result = findLongestSubarray(arr, target);
-
-console.log(result); // Output: [1, 2] (The subarray [4, 3] has a sum of 7, which is less than the target value of 5, and it is the longest subarray with a sum less than or equal to the target value.)
-
+[
+  ["ate", "eat", "tea"], //sorted alphabetically { ate, eat, tea }
+  ["nat", "tan"], //sorted alphabetically { nat, tan }
+  ["bat"]
+]
 ```
 
-```typescript
-const arr = [1, 4, 3, 6, 8, 2];
-const target = 0;
-const result = findLongestSubarray(arr, target);
+## Constraints
 
-console.log(result); // Output: null (There is no subarray with a sum less than or equal to the target value of 0.)
+* The input list of words will contain at most 10^4 words.
+* The length of each word will be at most 100.
+* The words will only contain lowercase English letters.
 
-```
+## Solution Requirements
+
+Your solution should be implemented using TypeScript and should adhere to the following requirements:
+
+* The returned list should contain groups of sorted anagrams
+* You may use any data structure that you think is appropriate to solve the problem.
+* Your solution should be thoroughly tested and handle edge cases appropriately.

@@ -7,14 +7,14 @@ READ THE FOLLOWING CAREFULLY BEFORE STARTING THE TEST.
 ### NOTES
 
 * **DO NOT OPEN THE `SRC FOLDER` UNTIL YOU START THE TIMER FOR THE TEST.**
-* You are required to **turn on your camera** for video feed and **share your screen** before proceeding with rest of the instructions.
+* You are required to **TURN ON YOUR CAMERA** for video feed and **SHARE YOUR SCREEN** before proceeding with rest of the instructions.
 * After cloning this repo, open your terminal and run `npm install` to install all the dependencies so everything is setup before starting the timer
 
 ### INSTRUCTIONS
 
 You have `30 minutes` to attempt `3 challenges`.
 
-In the `src` folder, there are 5 folders, `q1`, `q2`, `q3` and `__test__` folder. The `q` folders contain the 
+In the `src` folder, there are 4 folders, `q1`, `q2`, `q3` and `__test__` folder. The `q` folders contain the 
 challenges while the `__test__` folder contains the `Jest Test Suites` that would check your code for correctness.
 
 In each `q` folder, there are 2 files: a `README.md` file and an `index.ts` file. The `README.md` file contains the 

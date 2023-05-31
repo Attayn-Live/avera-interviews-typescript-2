@@ -56,7 +56,7 @@ Ensure the last portion of the output (where the total result is shown) is visib
 
 An example screenshot is as shown below:
 
-![Overview](__/shot1.png?raw=true)
+![Overview](__/s.png?raw=true)
 
 #### READY?
 
